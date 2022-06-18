@@ -70,22 +70,39 @@ $(document).ready(function () {
 
   $(".wrapper").click(function () {
     setTimeout(function () {
-        $(".menu-mobile").removeClass("is-active");
-      }, 400);
-      $(".list-menu-item-mb").queue(function (next) {
-        $(this).css({
-          "margin-left": "-300px",
-        });
-        next();
+      $(".menu-mobile").removeClass("is-active");
+    }, 400);
+    $(".list-menu-item-mb").queue(function (next) {
+      $(this).css({
+        "margin-left": "-300px",
       });
+      next();
+    });
 
-      $(".wrapper").queue(function (next) {
-        $(this).css({
-          "z-index": -1,
-          opacity: 0,
-        });
-        next();
+    $(".wrapper").queue(function (next) {
+      $(this).css({
+        "z-index": -1,
+        opacity: 0,
       });
-      $(".hamburger").removeClass("is-active");
+      next();
+    });
+    $(".hamburger").removeClass("is-active");
   });
+
+  $(".img-feature-work > .text-feature-work").hover(
+    function () {
+      $(this).css({
+        color: "#DEDEDE",
+        paddingTop: 0,
+        background: "rgba(0, 0, 0,.6)",
+      });
+    },
+    function () {
+      $(this).css({
+        color: "transparent",
+        paddingTop: "40px",
+        background: "rgba(0, 0, 0,0)",
+      });
+    }
+  );
 });

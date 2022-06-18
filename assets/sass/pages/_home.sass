@@ -1,6 +1,8 @@
 .header
     background: $dark
-    opacity: .7
+    width: 100%
+    top: 0
+    z-index: 3
 .base-info
     background: $bgDark
     padding: 130px 0 150px 0
@@ -9,8 +11,13 @@
 .avatar
     width: 240px
     margin: 0 auto
+    @include pc
+        width: 400px
     & img
         border-radius: 100vh
+        @include transition(.4s)
+        &:hover
+            transform: scale(1.2)
 
 .box-avatar
     @include tablet
@@ -25,6 +32,12 @@
     text-align: center
     color: white
     margin-bottom: 20px
+    @include pc
+        font-size: 64px
+        line-height: 70px
+        letter-spacing: -.5px
+        text-align: left
+        margin-bottom: 24px
 .description
     font-weight: 500
     font-size: 18px
@@ -32,13 +45,128 @@
     text-align: center
     color: $gray
     margin-bottom: 48px
+    padding: 0 10px
+    @include pc
+        text-align: left
+        padding: 0 150px 0 0
+        margin-bottom: 64px
+        font-size: 24px
+        line-height: 36px
+        letter-spacing: -.5px
+        font-weight: 600
 .send-mail
     font-weight: 600
     font-size: 18px
     line-height: 25px
+    text-align: center
+    @include pc
+        text-align: left
     & a
         background: #9D9D9D
         padding: 16px 22px
-    & .icon-email 
+        @include pc
+            width: 370px
+            padding: 18px
+    & .icon-email
         margin-bottom: -5px
         padding-right: 16px
+
+.goto
+    padding: 8px 6px
+
+    & .goto-text
+        font-weight: 600
+        font-size: 18px
+        line-height: 25px
+        color: #DEDEDE
+        & ion-icon
+            margin-bottom: -2px
+            margin-right: 10px
+.img-feature-work
+    text-align: center
+.box-img-feature
+    padding-top: 40px
+    padding-bottom: 116px
+    @include pc
+        padding-bottom: 378px
+
+.img-feature-work
+    position: relative
+    margin-bottom: 24px
+    & img
+        width: 100%
+        
+    @include pc
+        img
+            width: 100%
+        .translate-down
+            transform: translateY(120px)
+
+.text-feature-work
+    display: none
+    color: transparent
+    font-weight: 700
+    font-size: 28px
+    line-height: 38px
+    letter-spacing: -.5px
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    display: flex
+    justify-content: center
+    align-items: center
+    background: transparent
+    padding-top: 40px
+    @include transition(.4s)
+    @include pc
+        font-size: 40px
+        line-height: 54px
+
+.visual-element
+    margin-bottom: 16px
+    & img
+        width: 100%
+
+.box-title
+    margin-bottom: 34px
+    font-weight: 700
+    font-size: 28px
+    line-height: 38px
+    letter-spacing: -.5px
+    text-align: center
+    color: #DEDEDE
+    @include pc
+        font-size: 36px
+        line-height: 49px
+        margin-bottom: 65px
+.box-content
+    padding-bottom: 200px
+    @include pc
+        padding-bottom: 240px
+
+.contact-me
+    padding-bottom: 122px
+.contact-title
+    color: #DEDEDE
+    font-size: 28px
+    font-weight: 700
+    line-height: 38px
+    letter-spacing: -.5px
+    margin-bottom: 12px
+    @include pc
+        font-size: 36px
+        line-height: 49px
+
+.contact-content
+    padding: 0 60px
+    color: #959595
+    font-weight: 500
+    font-size: 18px
+    line-height: 26px
+    margin-bottom: 38px
+    @include pc
+        font-weight: 600
+        font-size: 24px
+        line-height: 38px
