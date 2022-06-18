@@ -1,0 +1,9 @@
+@mixin transition($time)
+    transition: all ease-in-out $time
+
+@mixin tablet
+    @media (max-width: 767px)
+        @content
+
+@mixin border($color)
+    border: solid 1px $greenRazer
