@@ -15,8 +15,7 @@ jobs:
           npm ci 
           npm run build
           npm i -g firebase-tools@10.6.0
-          firebase login
-          firebase deploy
+          firebase deploy --token ${{ secrets.FIREBASE_TOKEN }}
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: "${{ secrets.GITHUB_TOKEN }}"
