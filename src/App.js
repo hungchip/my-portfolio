@@ -7,11 +7,7 @@ function App() {
   return (
     <div className="App">
       <div className="container">
-        <h1>
-          Website
-          <br />
-          Coming Soon
-        </h1>
+        <h1>Điều đặc biệt sắp tới</h1>
         <Timer />
         <Optin />
         <Preloader />

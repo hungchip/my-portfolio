@@ -11,7 +11,7 @@ class CountDown extends Component {
       minutes: 0,
       hours: 0,
       secounds: 0,
-      time_up: ""
+      time_up: "",
     };
     this.x = null;
     this.deadline = null;
@@ -38,7 +38,7 @@ class CountDown extends Component {
         minutes: 0,
         hours: 0,
         seconds: 0,
-        time_up: "TIME IS UP"
+        time_up: "TIME IS UP",
       });
     }
   }
@@ -55,25 +55,25 @@ class CountDown extends Component {
         <div className="col-4">
           <div className="box">
             <p id="day">{days}</p>
-            <span className="text">Days</span>
+            <span className="text">Ngày</span>
           </div>
         </div>
         <div className="col-4">
           <div className="box">
             <p id="hour">{hours}</p>
-            <span className="text">Hours</span>
+            <span className="text">Giờ</span>
           </div>
         </div>
         <div className="col-4">
           <div className="box">
             <p id="minute">{minutes}</p>
-            <span className="text">Minutes</span>
+            <span className="text">Phút</span>
           </div>
         </div>
         <div className="col-4">
           <div className="box">
             <p id="second">{seconds}</p>
-            <span className="text">Seconds</span>
+            <span className="text">Giây</span>
           </div>
         </div>
       </div>

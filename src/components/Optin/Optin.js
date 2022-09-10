@@ -10,7 +10,7 @@ class Optin extends Component {
   render() {
     return (
       <div className="optin">
-        <p>Want to be the first to know when we launch?</p>
+        <p>Hãy là người đầu tiên biết điều này</p>
         <a href="https://www.facebook.com/Mr.Chip.1st/">
           <button onClick={() => this.modal()}>Click Me</button>
         </a>
