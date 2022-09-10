@@ -12,10 +12,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: |
+          npm i -g firebase-tools@10.6.0
           npm ci 
           npm run build
-          npm i -g firebase-tools@10.6.0
           firebase deploy --token ${{ secrets.FIREBASE_SERVICE_ACCOUNT_MY_PORTFOLIO_809F3 }}
+          firebase use --token ${{secrets.FIREBASE_TOKEN_DEV}} develop
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: "${{ secrets.GITHUB_TOKEN }}"
