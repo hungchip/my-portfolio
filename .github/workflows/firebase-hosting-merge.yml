@@ -2,7 +2,7 @@
 # https://github.com/firebase/firebase-tools
 
 name: Deploy to Firebase Hosting on merge
-"on":
+'on':
   push:
     branches:
       - develop
@@ -11,15 +11,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: |
-          npm i -g firebase-tools@10.6.0
-          npm ci 
-          npm run build
-          firebase use --token ${{secrets.FIREBASE_TOKEN_DEV}} develop
-          firebase deploy --token ${{ secrets.FIREBASE_SERVICE_ACCOUNT_MY_PORTFOLIO_809F3 }}
+      - run: npm ci && npm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
-          repoToken: "${{ secrets.GITHUB_TOKEN }}"
-          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_MY_PORTFOLIO_809F3 }}"
+          repoToken: '${{ secrets.GITHUB_TOKEN }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_MY_PORTFOLIO_809F3 }}'
           channelId: live
           projectId: my-portfolio-809f3
