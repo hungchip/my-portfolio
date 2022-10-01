@@ -11,7 +11,7 @@ class Optin extends Component {
     return (
       <div className="optin">
         <p>Hãy là người đầu tiên biết điều này</p>
-        <a href="">
+        <a href="/">
           <button onClick={() => this.modal()}>Click Me</button>
         </a>
         <div id="modal">
